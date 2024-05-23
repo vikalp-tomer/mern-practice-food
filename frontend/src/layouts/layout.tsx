@@ -8,10 +8,10 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="">
+    <div className="flex flex-col">
       <Header />
       <Hero />
-      <div>{children}</div>
+      <div className="container mx-auto">{children}</div>
       <Footer />
     </div>
   );
