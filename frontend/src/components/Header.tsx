@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
-import { Menu } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetTitle,
-  SheetTrigger,
-} from "./ui/sheet";
-import { Separator } from "./ui/separator";
+import MobileNav from "./MobileNav";
+import MainNav from "./MainNav";
 
 const Header = () => {
   return (
@@ -20,33 +12,10 @@ const Header = () => {
         Merneats.com
       </Link>
       <div className="hidden md:block">
-        <Button
-          variant={"ghost"}
-          className="hover:text-orange-500 hover:bg-white font-bold tracking-tight"
-        >
-          Log In
-        </Button>
+        <MainNav />
       </div>
       <div className="md:hidden">
-        <Sheet>
-          <SheetTrigger>
-            <Menu className="text-orange-500" />
-          </SheetTrigger>
-          <SheetContent className="space-y-3">
-            <SheetTitle>
-              <h1>Welcome to merneats.com</h1>
-            </SheetTitle>
-            <Separator />
-            <SheetDescription className="flex">
-              <Button
-                variant={"ghost"}
-                className="bg-orange-500 text-white flex-1 font-bold tracking-tight hover:bg-black hover:text-white"
-              >
-                Log In
-              </Button>
-            </SheetDescription>
-          </SheetContent>
-        </Sheet>
+        <MobileNav />
       </div>
     </div>
   );
