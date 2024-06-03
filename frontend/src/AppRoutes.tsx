@@ -13,6 +13,7 @@ const AppRoutes = () => {
           </Layout>
         }
       />
+      <Route path="/user-profile" element={<span>User Profile</span>} />
     </Routes>
   );
 };
